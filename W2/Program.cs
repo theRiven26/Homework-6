@@ -11,6 +11,7 @@ double k2 = UserInputDouble("Enter k2");
 if (k1 == k2)
 {
 	Console.WriteLine("it is impossible to find the coordinates of the point of intersection of the given lines, since these lines are parallel.");
+	return;
 }
 
 GetPointCoordinates(k1, k2, b1, b2, out double x, out double y);
@@ -18,6 +19,6 @@ Console.WriteLine($"({x};{y})");
 
 void GetPointCoordinates(double k1, double k2, double b1, double b2, out double x, out double y)
 {
-	double x = (b1 - b2) / (k2 - k1);
-	double y = (k2 * x + b2);
+	x = (b1 - b2) / (k2 - k1);
+	y = (k2 * x + b2);
 }
